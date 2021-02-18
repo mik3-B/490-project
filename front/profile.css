@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+.profiles-wrapper {
+  padding: 5vw 1vw 1vw 1vw;
+  margin: 1vw 0 1vw 1vw;
+  background-color: white;
+  flex-basis: 24%;
+  flex-grow: 0;
+}
+
+.profiles-wrapper .picture {
+  text-align: center;
+}
+
+.rounded-img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.users-list-wrapper {
+  padding: 1vw;
+  margin: 1vw 1vw 1vw 0;
+  background-color: white;
+  flex-basis: 38%;
+  flex-grow: 0;
+  flex-direction: row;
+}
+
+.users-list {
+  display: flex;
+  margin-top:20px;
+}
+
+.users-list .user-details {
+  flex-basis: 75%;
+}
+
+.users-list .user-img {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.users-list .user-img img{
+    width:40% !important;
+  }
+
+.articles-list-wrapper {
+  padding: 1vw;
+  margin: 1vw 1vw 1vw 0;
+  background-color: white;
+  flex-basis: 38%;
+  flex-grow: 0;
+}
+.right-wrapper{
+    margin-left: 20px;;
+}
+.login{
+    width:96% !important;
+    margin: 0 !important;
+}
