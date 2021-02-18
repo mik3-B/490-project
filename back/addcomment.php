@@ -5,11 +5,12 @@ if($_POST ){
     $stmt = $db->prepare("SELECT * FROM users WHERE id = ?");
     $stmt->execute(array($_POST['user_id']));
     if($stmt->fetch()){
-        $stmt = $db->prepare("INSERT INTO comments (profile_id,added_by,comments) VALUES(:profile_id,:added_by,:comments)");
+        $stmt = $db->prepare("INSERT INTO comments (profile_id,added_by,comments,created_at) VALUES(:profile_id,:added_by,:comments,:created_at)");
         $stmt->execute(array(
             ':profile_id'=>$_POST['profile_id'],
             ':added_by'=>$_POST['user_id'],
-            ':comments'=>$_POST['comment']
+            ':comments'=>$_POST['comment'],
+            ':created_at'=>date('d-m-Y H:i:s')
         ));
         $result = array(
             'status'=>'success',
